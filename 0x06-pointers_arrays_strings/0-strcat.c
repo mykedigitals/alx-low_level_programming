@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * strcat - Concatenates the string pointed to the @src,
@@ -10,15 +11,16 @@
  * Return: Pointer to the destination string
  */
 
-char *strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
-	int opt = 0, dest_line = 0;
+	int index;
+	int dest_line;
 
-	while (dest[opt++])
-		dest_line++;
+	for (index = 0; dest[index] != '\0'; index++)
+	{}
 
-	for (opt = 0; src[opt]; opt++)
-		dest[dest_line++] = src[opt];
+	for (dest_line = 0; src[dest_line] != '\0'; dest_line++)
+		dest[index + dest_line] = src[dest_line];
 
 	return (dest);
 
