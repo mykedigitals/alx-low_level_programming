@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * strcat - Concatenates the string pointed to the @src,
+ * _strcat - Concatenates the string pointed to the @src,
  * including the terminating null byte, to the end of the
  * string
  * @dest: Pointer to the string that we want to concat on
