@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * _puts - Print character.
- * @str: var
- * Return: Always 0 (Success)
+ * _puts - Prints a string to stdout.
+ * @str: The string to be printed.
  */
 
 void _puts(char *str)
 {
+	while (*str)
+		_putchar(*str++);
+	_putchar('\n');
 }
