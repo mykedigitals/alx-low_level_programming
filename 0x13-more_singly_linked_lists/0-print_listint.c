@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_listint - prints all the elements of a list
- * @h: the head of the list to print from
+ * print_listint - prints out all the elements of a list
+ * @h: the beginning of the list to print from
  * Return: the number of nodes
  */
 
