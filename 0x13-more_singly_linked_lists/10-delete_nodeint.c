@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - removes the node at index @index of a list
- * @head: double pointer to head of list
+ * delete_nodeint_at_index - removes the node at nth path @index of a list
+ * @head: two pointer to the beginning of list
  * @index: node to be removed
  *
  * Return: 1 if success, -1 if failure
