@@ -9,31 +9,21 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int binaryN = 0;
-	unsigned int num = 0;
-	int raiseToPower = 0;
+	unsigned int n = 0, binaryN = 1;
+	int power;
 
-	if (b == '\0')
+	if (*b == '\0')
 		return (0);
 
-	while (b[binaryN + 1])
-		binaryN++;
+	for (power = 0; b[power];)
+		power++;
 
-	while (binaryN >= 0)
+	for (power -= 1; power >= 0; power--)
 	{
-		if (b[binaryN] == '0')
-		{
-			binaryN--;
-			raiseToPower++;
-		}
-		else if (b[binaryN] == '1')
-		{
-			num += (1 << raiseToPower);
-			binaryN--;
-			raiseToPower++;
-		}
-		else
+		if (b[power] != '0' && b[power] != '1')
 			return (0);
+		n += (b[power] - '0') * binaryN;
+		binaryN *= 2;
 	}
-	return (num)
+	return (n);
 }
