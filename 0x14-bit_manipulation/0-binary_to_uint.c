@@ -9,31 +9,23 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int tee = 0;
+	unsigned int tee = 1;
 	unsigned int vep = 0;
 	int value = 0;
 
-	if (b == '\0')
+	if (*b == '\0')
 		return (0);
 
-	while (b[tee + 1])
-		tee++;
+	for (value = 0; b[value];)
+		value++;
 
-	while (tee >= 0)
+	for (value -= 1; value >= 0; value--)
 	{
-		if (b[tee] == '0')
-		{
-			tee--;
-			value++;
-		}
-		else if (b[tee] == '1')
-		{
-			vep += (1 << value);
-			tee--;
-			value++;
-		}
-		else
+		if (b[value] != '0' && b[value] != '1')
 			return (0);
+
+		vep += (b[value] - '0') * tee;
+		tee *= 2;
 	}
 	return (vep);
 }
