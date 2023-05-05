@@ -12,7 +12,7 @@ int get_endianness(void)
 	char *pov = (char *)&val;
 
 	val = 1;
-	
+
 	if (*pov == 1)
 		return (1);
 
