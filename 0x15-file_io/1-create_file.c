@@ -3,7 +3,7 @@
 /**
  * create_file - it creates a readable and writeable file
  * @filename: the name of file that is created
- * @text_content: the text that we want to write inside 
+ * @text_content: the text that we want to write inside
  * @file
  *
  * Return: if success it returns 1, -1 when it fails
@@ -38,5 +38,5 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	close(filed);
-	return (1);
+
 }
