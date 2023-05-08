@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * read_textfile - reading a text file and print it as stdout FXNM
@@ -21,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (leet == NULL)
 		return (0);
 
-	filed = open(filename, 0_RDONLY);
+	filed = open(filename, O_RDONLY);
 	if (filed == -1)
 	{
 		free(leet);
